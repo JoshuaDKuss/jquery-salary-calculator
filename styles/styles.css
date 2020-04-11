@@ -1,0 +1,9 @@
+body {
+    background-color: cornflowerblue;
+}
+
+table,
+th,
+td {
+    border: 4px solid black;
+}
