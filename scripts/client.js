@@ -6,6 +6,7 @@ let formData = [];
 
 function addItems() {
     console.log('in addItems');
+    // get user inputs & place into object
     if ($('#eFirstName').val() === '') {
         alert('Enter Information In All Fields');
     } // end no description
@@ -23,7 +24,7 @@ function addItems() {
     } // 
     else {
         // get user inputs & place into an object
-        let itemsToAdd = {
+        let infoToAdd = {
                 eFirstName: $('#eFirstName').val(),
                 eLastName: $('#eLastName').val(),
                 eId: $('#eId').val(),
@@ -31,19 +32,20 @@ function addItems() {
                 aSalary: $('#aSalary').val()
             } // end itemsToAdd
             /*if (verbose)*/
-        console.log('itemsToAdd:', itemsToAdd);
+        console.log('itemsToAdd:', infoToAdd);
         // push object into our inventory array
-        formData.push(itemsToAdd);
+        formData.push(infoToAdd);
+        console.log('formData:', formData);
         // empty input
-        $('#eFirstName').val('');
-        $('#eLastName').val('');
-        $('#eId').val('');
-        $('#eTitle').val('');
-        $('#aSalary').val('');
-        displayFormData();
+        //$('#eFirstName').val('');
+        //$('#eLastName').val('');
+        //$('#eId').val('');
+        // $('#eTitle').val('');
+        //  $('#aSalary').val('');
+        //  displayFormData();
     } // end has description
 }
-console.log('Jello World');
+//console.log('Jello World');
 console.log(addItems());
 //console.log(itemsToAdd);
 
@@ -69,5 +71,6 @@ function displayFormData() {
 console.log(displayFormData());
 
 function onReady() {
+    //console.log('in onReady');
     $('#submitBtn').on('click', addItems);
 }
