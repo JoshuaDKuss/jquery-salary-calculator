@@ -4,25 +4,24 @@ let formData = [];
 
 
 function addItems() {
-    ////console.log('in addItems');
-    ///// get user inputs & place into object
-    //if ($('#eFirstName').val() === '') {
-    //  alert('Enter Information In All Fields');
-    //} // end no description
-    //if ($('#eLastName').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#eId').val() === '') {
-    //  alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#eTitle').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#aSalary').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
+    // console.log('in addItems');
+    // get user inputs & place into object
+    if ($('#eFirstName').val() === '') {
+        alert('Enter Information In All Fields');
+    } // end no description
+    if ($('#eLastName').val() === '') {
+        alert('Enter Information In All Fields');
+    } // 
+    if ($('#eId').val() === '') {
+        alert('Enter Information In All Fields');
+    } // 
+    if ($('#eTitle').val() === '') {
+        alert('Enter Information In All Fields');
+    } // 
+    if ($('#aSalary').val() === '') {
+        alert('Enter Information In All Fields');
+    } // 
     //else {
-
     // get user inputs & place into an object
     let infoToAdd = {
             eFirstName: $('#eFirstName').val(),
@@ -48,8 +47,6 @@ function addItems() {
 //console.log(addItems());
 //console.log(itemsToAdd);
 
-
-
 function displayFormData() {
     /*if (verbose)*/
     console.log('in displayFormData:', formData);
@@ -73,10 +70,8 @@ function displayFormData() {
             </tr>`)
             //<td>${formData[i].aSalary}</td>`) / / end append
             // add salaries to total (and divide by 12)
-        totalMonthSal += (Number(`${formData[i].aSalary}`) / 12); //////><>><><><><><><
-        //totalMonthSal += Number(formData[i].aSalary) / 12;
+        totalMonthSal += (Number(`${formData[i].aSalary}`) / 12); //////
         //tried parseInt & Number
-
     } // end for /////////
     //return totalMonthSal;
     console.log(totalMonthSal);
@@ -99,12 +94,7 @@ function deleteBtn() {
     $(this).parent().parent().remove();
 }
 
-//function addEmpSalaries() {
-
-//}
-
 function onReady() {
     //console.log('in onReady');
-    $('#submitBtn').on('click', addItems);
-    //$('.deleteBtn ').on('click', deleteBtn);
+    $('#submitBtn').on('click', addItems); //$('.deleteBtn ').on('click', deleteBtn);
 }
