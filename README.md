@@ -9,10 +9,10 @@
 3 (x) buttons talk to console
 4 (x) push contents from inputs to array
 5 (x) show array in DOM
-6 () calculate monthly costs and append to DOM
-7 () >= $20k checker / make red
-8 () delete button removes entire row from DOM
-()()()---base mode complete---
+6 (x) calculate monthly costs and append to DOM
+7 (x) >= $20k checker / make red
+8 (x) delete button removes entire row from DOM
+(x)(x)(x)---base mode complete---
 9 () Stretch Goals?
 
 Your project description goes here. What problem did you solve? How did you solve it?

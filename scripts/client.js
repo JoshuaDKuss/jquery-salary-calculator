@@ -6,21 +6,21 @@ let formData = [];
 function addItems() {
     // console.log('in addItems');
     // get user inputs & place into object
-    if ($('#eFirstName').val() === '') {
-        alert('Enter Information In All Fields');
-    } // end no description
-    if ($('#eLastName').val() === '') {
-        alert('Enter Information In All Fields');
-    } // 
-    if ($('#eId').val() === '') {
-        alert('Enter Information In All Fields');
-    } // 
-    if ($('#eTitle').val() === '') {
-        alert('Enter Information In All Fields');
-    } // 
-    if ($('#aSalary').val() === '') {
-        alert('Enter Information In All Fields');
-    } // 
+    //if ($('#eFirstName').val() === '') {
+    //alert('Enter Information In All Fields');
+    //} // end no description
+    //if ($('#eLastName').val() === '') {
+    //alert('Enter Information In All Fields');
+    //} // 
+    //if ($('#eId').val() === '') {
+    //alert('Enter Information In All Fields');
+    //} // 
+    //if ($('#eTitle').val() === '') {
+    //alert('Enter Information In All Fields');
+    //} // 
+    //if ($('#aSalary').val() === '') {
+    //  alert('Enter Information In All Fields');
+    //} // 
     //else {
     // get user inputs & place into an object
     let infoToAdd = {
