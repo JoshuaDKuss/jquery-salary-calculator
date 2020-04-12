@@ -7,3 +7,15 @@ th,
 td {
     border: 4px solid black;
 }
+
+.submitBtn {
+    text-align: center;
+}
+
+.redBar {
+    background-color: crimson;
+}
+
+#totalMonthSalDiv {
+    text-align: right;
+}
