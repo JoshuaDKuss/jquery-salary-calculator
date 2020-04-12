@@ -1,7 +1,7 @@
 $(document).ready(onReady);
 
 let formData = [];
-let totalMonthSal = 0;
+
 
 function addItems() {
     ////console.log('in addItems');
@@ -57,6 +57,8 @@ function displayFormData() {
     let el = $('#tableBody');
     // empty ul
     el.empty();
+    $('#totalMonthSal').empty();
+    let totalMonthSal = 0;
     // loop through inventory
     for (let i = 0; i < formData.length; i++) {
         // append each item to ul
@@ -71,12 +73,13 @@ function displayFormData() {
             </tr>`)
             //<td>${formData[i].aSalary}</td>`) / / end append
             // add salaries to total (and divide by 12)
-            /////totalMonthSal += parseInt(`${formData[i].aSalary}`) / 12; //////><>><><><><><><
-        totalMonthSal += parseInt(formData[i].aSalary) / 12;
+        totalMonthSal += (Number(`${formData[i].aSalary}`) / 12); //////><>><><><><><><
+        //totalMonthSal += Number(formData[i].aSalary) / 12;
         //tried parseInt & Number
-        console.log(totalMonthSal);
+
     } // end for /////////
     //return totalMonthSal;
+    console.log(totalMonthSal);
 
     //delete
     $('.deleteBtn').on('click', deleteBtn);
