@@ -5,23 +5,7 @@ let formData = [];
 
 function addItems() {
     // console.log('in addItems');
-    // get user inputs & place into object
-    //if ($('#eFirstName').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // end no description
-    //if ($('#eLastName').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#eId').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#eTitle').val() === '') {
-    //alert('Enter Information In All Fields');
-    //} // 
-    //if ($('#aSalary').val() === '') {
-    //  alert('Enter Information In All Fields');
-    //} // 
-    //else {
+   
     // get user inputs & place into an object
     let infoToAdd = {
             eFirstName: $('#eFirstName').val(),
@@ -45,7 +29,6 @@ function addItems() {
 } // end has description
 
 //console.log(addItems());
-//console.log(itemsToAdd);
 
 function displayFormData() {
     /*if (verbose)*/
@@ -70,17 +53,14 @@ function displayFormData() {
             </tr>`)
             //<td>${formData[i].aSalary}</td>`) / / end append
             // add salaries to total (and divide by 12)
-        totalMonthSal += (Number(`${formData[i].aSalary}`) / 12); //////
-        //tried parseInt & Number
-    } // end for /////////
-    //return totalMonthSal;
+        totalMonthSal += (Number(`${formData[i].aSalary}`) / 12); 
+    } // end for 
+    
     console.log(totalMonthSal);
-
     //delete
     $('.deleteBtn').on('click', deleteBtn);
     $('#totalMonthSal').append(totalMonthSal.toLocaleString('en-US'));
     //$('#totalMonthSal').append(totalMonthSal);
-
     if (totalMonthSal > 20000) {
         console.log('More than 20k!');
         $('#totalMonthSalDiv').addClass('redBar')
@@ -95,6 +75,5 @@ function deleteBtn() {
 }
 
 function onReady() {
-    //console.log('in onReady');
     $('#submitBtn').on('click', addItems); //$('.deleteBtn ').on('click', deleteBtn);
 }
